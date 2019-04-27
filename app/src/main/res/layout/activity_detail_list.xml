@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/textView"
+        android:layout_marginTop="69dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:textSize="16dp"
+        android:elegantTextHeight="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Work"
+
+        android:id="@+id/textViewWork"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="date"
+        android:textSize="16dp"
+        android:id="@+id/textViewDate"
+
+        android:layout_above="@+id/textViewWork"
+        android:layout_toEndOf="@+id/textView3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewTd"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:textColor="#ff4d7f"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewWork"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+
+        android:id="@+id/rgp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Absent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/radioButtonA"
+            android:checked="true"/>
+
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Present"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
+            android:id="@+id/radioButtonP"
+            android:checked="false"/>
+
+
+    </RadioGroup>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/rgp"
+        android:layout_above="@+id/buttonSave"
+        android:layout_toEndOf="@+id/rgp">
+
+        <TextView
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:visibility="gone"
+            android:layout_marginLeft="-35dp"
+
+            android:fontFamily="serif"
+            android:id="@+id/InvisibleText"
+            android:textColor="#db2424"
+            android:textSize="15dp"
+
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:text="Reset"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginTop="4dp"
+
+            android:visibility="gone"
+            android:id="@+id/buttonRes"
+            android:onClick="reset"
+
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <Button
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark it !"
+
+
+        android:id="@+id/buttonSave"
+        android:layout_below="@+id/rgp"
+        android:layout_alignStart="@+id/textViewWork"
+        android:layout_alignEnd="@+id/textView"
+        android:background="@drawable/button_border"
+        android:textColor="#000"
+        android:onClick="take"/>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List Absences"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/buttonSave"
+        android:layout_alignEnd="@+id/buttonSave"
+        android:layout_alignStart="@+id/buttonSave"
+        android:background="@drawable/button_border"
+        android:textColor="#000"
+        android:id="@+id/buttonAD"
+        android:onClick="listAbs"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:fontFamily="serif"
+        android:id="@+id/textViewSal"
+        android:textStyle="normal"
+        android:textColor="#1751c3"
+        android:layout_alignEnd="@+id/buttonAD"
+        android:layout_alignStart="@+id/buttonAD"
+        android:layout_below="@+id/buttonAD"
+        android:layout_above="@+id/buttonPD"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show details"
+        android:id="@+id/buttonPD"
+        android:background="@drawable/button_border"
+        android:textColor="#000"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/buttonAD"
+        android:layout_toEndOf="@+id/textView3"
+        android:onClick="details"/>
+
+
+
+
+</RelativeLayout>

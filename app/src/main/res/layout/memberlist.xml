@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:weightSum="1"
+
+              >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:outlineProvider="background"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name:"
+            android:textSize="18dp"
+
+            android:id="@+id/textView7"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mahesh agrawal"
+            android:id="@+id/textViewName"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Work:"
+            android:textSize="18dp"
+            android:id="@+id/textView9"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Gardening"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="70dp"
+            android:id="@+id/textViewWork"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignEnd="@+id/textViewName"
+            android:layout_toEndOf="@+id/textView7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Date:"
+            android:textSize="18dp"
+            android:id="@+id/textView11"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1235"
+            android:id="@+id/textViewDate"
+            android:layout_alignBottom="@+id/textView11"
+            android:layout_alignStart="@+id/textViewWork"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Salary: "
+            android:id="@+id/textView13"
+            android:textSize="18dp"
+            android:layout_marginStart="64dp"
+            android:layout_below="@+id/textViewWork"
+            android:layout_toEndOf="@+id/textViewDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1000"
+            android:id="@+id/textViewSal"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/textView13"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/textView13"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:id="@+id/imageView"
+            android:src="@mipmap/right1"
+            android:layout_marginRight="-1dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNum"
+        android:visibility="gone"/>
+
+
+</LinearLayout>
